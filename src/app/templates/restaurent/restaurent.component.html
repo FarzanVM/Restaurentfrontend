@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <link rel="stylesheet" src="./restaurent.component.scss">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <body>
+        <div class="header">
+            <h1>Foodie</h1>
+            <input type="text" [(ngModel)]="foodname">
+            <button (click)="searchFood(foodname)">Search</button>
+            <span class="material-symbols-outlined" (click)="myprofile()">
+                person
+            </span>
+        </div>
+        <div class="navbar">
+            <button (click)="sortBy()">Sort By</button>
+            <div class="sortbylist"  [ngStyle]="{'display':dropdown}">
+                <p (click)="sortByName()">Name</p>
+                <p (click)="sortByPrice()">Price</p>
+                <p>Ratings</p>
+            </div>
+            <button (click)="allfood()">All Foods</button>
+            <button (click)="getBiriyani()">Biriyani</button>
+            <button (click)="getIcecream()">ice-creams</button>
+            <button (click)="getShake()">shakes</button>
+            <button (click)="getPizza()">Pizza</button>
+            <button (click)="getBurger()">Burger</button>
+            <button (click)="mycart()">My cart</button>
+        </div>
+        <div class="container">
+            <div class="foodwrapper">
+                <router-outlet></router-outlet>
+            </div> 
+        </div>
+    </body>
+</html>

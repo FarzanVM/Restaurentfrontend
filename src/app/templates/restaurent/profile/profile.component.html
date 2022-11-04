@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <link rel="stylesheet" src="./profile.component.scss">
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <body>
+        <div class="profilecontainer">
+            <img src="../../../../assets/images/profile.png" alt="profile">
+
+            <form (ngSubmit)="f.form.valid && addProfile()" #f="ngForm" > 
+                <label>Name</label>
+                <input type="text" name="name" [(ngModel)]="model.name" value={{details.name}}><br>
+                <label>Phone Number</label>
+                <input type="text" name="number"[(ngModel)]="model.number" value={{details.number}}><br>
+                <label>Address</label>
+                <textarea name="address" [(ngModel)]="model.address" value={{details.address}}></textarea>
+                <button type="submit" [ngStyle]="{'display':addbtn}">Add details</button>
+                <button>update details</button>
+            </form>
+            <button class="logout" (click)="logout()">Logout</button>
+
+        </div>
+    </body>
+</html>

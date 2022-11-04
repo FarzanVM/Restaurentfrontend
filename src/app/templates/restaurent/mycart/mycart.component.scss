@@ -1,0 +1,88 @@
+.foodwrapper{
+    display: flex;
+    flex-direction: row;
+    column-gap:26px;
+    row-gap:20px;
+    flex-wrap: wrap;
+}
+.foodcontainer{
+    width:150px;
+    // height:270px;
+    background-color: white;
+    border-radius: 8px;
+    padding: 10px;
+    img{
+        height:140px;
+        width:150px;
+        border-radius: 5px;
+        &:hover{
+            box-shadow: 0px 0px 7px rgb(178, 174, 174);
+        } 
+    }
+    p{  
+        margin:5px;
+        font-weight: bold;
+    }
+    p.price{
+        color:rgb(29, 96, 29);
+    }
+    .delete{
+        width:100%;
+        padding:5px;
+        border: none;
+        border-radius: 8px;
+        background-color: #e7250c;
+        margin-bottom: 5px;
+        &:hover{
+            box-shadow: 0px 0px 7px rgb(178, 174, 174);
+        }
+    }
+    .btn{
+        float: left;
+        width:50%;
+        padding:5px;
+        border: none;
+        border-radius: 8px;
+        background-color: #6994dd;
+        margin-bottom: 5px;
+        &:hover{
+            box-shadow: 0px 0px 7px rgb(178, 174, 174);
+        }
+    }
+
+    .buy{
+        background-color:rgb(27, 176, 27);
+    }
+    .status{
+        margin:0;
+        display: block;
+        padding:4px;
+        background-color: rgb(185, 185, 238);
+        border-radius: 8px;
+    }
+}
+
+.comment{
+    width:20%;
+    position: absolute;
+    left:40%;
+    top:40%;
+    background-color: aliceblue;
+    padding:10px;
+    border-radius: 8px;
+    textarea{
+        padding: 5px;
+        height: 100px;
+        width:97%;
+        border: none;
+        border-radius: 8px;
+    }
+    .addcmt{
+        padding: 5px;
+        border: none;
+        border-radius: 8px;
+    }
+    p{
+        color: rgb(57, 184, 57);
+    }
+}

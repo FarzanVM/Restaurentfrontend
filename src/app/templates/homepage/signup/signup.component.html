@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <link rel="stylesheet" src="./signup.component.scss">
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <body>
+        <form [formGroup]="signupForm" (ngSubmit)="signup()" >
+            <label>Username:</label><br>
+            <input type="text" name="email" formControlName="email"><br>
+            <label>Password:</label><br>
+            <input type="password" name="password" formControlName="password"><br>
+            <label>Confirm Password:</label><br>
+            <input type="password" name="confirm" formControlName="confirm"><br>
+            <p *ngIf="signupForm.errors?.['nomatch'] && (password?.touched) && (confirm?.touched)">PASSWORDS DONOT MATCH</p>
+            <button type="submit">Create Account</button>
+        </form>
+    </body>
+</html>

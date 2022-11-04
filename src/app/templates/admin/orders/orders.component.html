@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <link rel="stylesheet" src="./orders.component.scss">
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <body>
+        <div class="orderContainer">
+            <div class="orderitem" *ngFor="let order of orderlist">
+                <img src={{order.img}}>
+               <p class="name">{{order.name}}</p>
+                <p class="username">{{order.username}}</p>
+                <p class="number">{{order.number}}</p>
+                <p class="address">{{order.address}}</p>
+                <button id="statusbtn" (click)="changeStatus()" [ngStyle]="{'background-color':color}">{{order.status}}</button>
+                <div class="changestatus" [ngStyle]="{'display':displayStatus}">
+                    <p class="accepted" (click)="acceptOrder(order)">Accepted</p>
+                    <p class="rejected" (click)="rejectOrder(order)">Rejected</p>
+                    <p class="delivered" (click)="deliverOrder(order)">Delivered</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

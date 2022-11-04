@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <link rel="stylesheet" src="./mycart.component.scss">
+    </head>
+    <body>
+        <div class="foodwrapper">
+            <div class="foodcontainer" *ngFor="let order of orderlist">
+                <img src={{order.img}} alt="Biriyani">
+                <p>{{order.name}}</p>
+                <p>{{order.food_type}}</p>
+                <p class="price">{{order.price}} Rs</p>
+                <p *ngIf="order.status!='Rejected'">45 min</p>
+                <button class="delete"(click)="deletefromcart(order)">Delete from cart</button>
+                <p class="status" [ngStyle]="{'display':displaystatus}">{{order.status}}</p>
+                <button class="buy" (click)="buynow(order)" [ngStyle]="{'display':buybtn}" [ngClass]="{'btn':order.status==='Delivered'}
+                ">{{order.status}}</button>
+                <button  class="btn" *ngIf="order.status==='Delivered'" (click)="showcmtBox()">comment</button>
+
+                <div class="comment" [ngStyle]="{'display':showcmtbox}">
+                    <label>Review</label>
+                    <textarea name="comment" [(ngModel)]="model.comment"></textarea>
+                    <button class="addcmt"(click)="addcomment(order)">Send</button>
+                    <p [ngStyle]="{'display':cmtstatus}">Comment Added</p>
+                </div>
+            </div>
+            
+        </div>     
+    </body>
+</html>

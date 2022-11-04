@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <link rel="stylesheet" src="./removefood.component.scss">
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <body>
+        <div class="formContainer">
+            <form (ngSubmit)="f.form.valid && removefood()" #f="ngForm">
+                <label>Food Name</label><br>
+                <input type="text" name="foodname" [(ngModel)]="model.name"><br>
+                <label>Food type</label><br>
+                <input type="text" name="foodtype" [(ngModel)]="model.food_type"><br>
+                <button type="submit">Remove</button>
+            </form>
+        </div>
+    </body>
+</html>

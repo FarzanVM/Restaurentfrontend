@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <link rel="stylesheet" src="./adminsignup.component.scss">
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <body>
+        <form [formGroup]="adminsignupForm" (ngSubmit)="adminsignup()">
+            <label>Username:</label><br>
+            <input type="text" name="email" formControlName="email"><br>
+            <label>Password:</label><br>
+            <input type="password" name="password" formControlName="password"><br>
+            <label>Confirm Password:</label><br>
+            <input type="password" name="confirm" formControlName="confirm"><br>
+            <label>Restaurent Code:</label>
+            <input type="password" name="code" formControlName="code"><br>
+            <p *ngIf="adminsignupForm.errors?.['nocodematch'] && code?.touched">Code doesn't match</p>
+            <p *ngIf="adminsignupForm.errors?.['nomatch'] && (password?.touched) && (confirm?.touched)">PASSWORDS DO NOT MATCH</p>
+            <button type="submit">Create Admin</button>
+            <p>Already have an admin account <a routerLink="/login">Login</a></p>
+        </form>
+    </body>
+</html>

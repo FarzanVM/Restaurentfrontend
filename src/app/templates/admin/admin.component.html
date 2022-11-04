@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <link rel="stylesheet" src="./admin.component.scss">
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <body>
+        <div class="header">
+            <h1>Foodie</h1>
+            <input type="text" [formControl]="searchitem">
+            <button (click)="searchItem(searchitem.value)">Search</button>
+            <button class="logout" (click)="logout()">logout</button>
+        </div>
+        <div class="navbar">
+    
+            <button (click)="allfood()">Allfoods</button>
+            <button (click)="menuItem()">Menu Items</button> 
+            <button (click)="comments()">Reviews</button>
+            <button (click)="showOrders()">Orders</button>
+            <button (click)="addFood()">Add Food</button>
+            <button (click)="removeFood()">Remove Food</button>
+            <button (click)="updateFood()">Update Food</button>
+        </div>
+        <div class="container">
+            <router-outlet></router-outlet>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,41 @@
+.menuitemWrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 10px;
+    row-gap: 10px;
+}
+.menuitem{
+    display: grid;
+    width:23%;
+    height:150px;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    img{
+        grid-column: 1;
+        grid-row:span 2;
+        height: 100%;
+        width: 100%;
+        border-radius: 8px;
+    }
+    p{
+        grid-column: 2;
+        font-weight: bold;
+    }
+    .quantity{
+        padding:20px;
+        background-color: rgb(42, 65, 169);
+        border-radius: 8px;
+        color:white;
+    }
+    .status{
+        padding:10px;
+        background-color: rgb(43, 193, 43);
+        border-radius: 8px;
+        color:white;
+    }
+           
+}

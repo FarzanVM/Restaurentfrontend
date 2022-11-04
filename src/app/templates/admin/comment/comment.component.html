@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <link rel="stylesheet" src="./comment.component.scss">
+    </head>
+    <body>
+        <div class="commentwrapper">
+            <div class="commentcontainer" *ngFor="let comment of commentlist">
+                <img src={{comment.img}}>
+                <div class="textwrap">
+                    <p class="foodname">{{comment.name}}</p>
+                    <p>By::{{comment.customer_name}}</p>
+                    <p class="comment">{{comment.comment}}</p>
+                </div>      
+            </div>
+        </div>
+    </body>
+</html>

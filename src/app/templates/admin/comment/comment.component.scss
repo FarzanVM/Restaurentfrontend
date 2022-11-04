@@ -1,0 +1,32 @@
+.commentwrapper{
+    display: flex;
+    flex-direction: column;
+    column-gap:26px;
+    row-gap:20px;
+    flex-wrap: wrap;
+    .commentcontainer{
+        margin: auto;
+        width:90%;
+        border-radius: 8px;
+        padding:5px;
+        background-color: aliceblue;
+        img{
+            float: left;
+            width:200px;
+            height: 200px;
+            border-radius: 8px;
+        }
+        .textwrap{
+            margin-left: 10px;
+            float: left;
+        }
+        .comment{
+            color:rgb(54, 136, 47);
+            font-weight:bold;
+        }
+        p{
+            font-size: large;
+            font-weight: 500;
+        }
+    }
+}

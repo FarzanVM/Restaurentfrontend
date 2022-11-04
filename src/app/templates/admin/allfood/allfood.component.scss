@@ -1,0 +1,40 @@
+.foodwrapper{
+    display: flex;
+    flex-direction: row;
+    column-gap:26px;
+    row-gap:20px;
+    flex-wrap: wrap;
+}
+.foodcontainer{
+    width:150px;
+    height:270px;
+    background-color: white;
+    border-radius: 8px;
+    padding: 10px;
+    img{
+        height:140px;
+        width:150px;
+        border-radius: 5px;
+        &:hover{
+            box-shadow: 0px 0px 7px rgb(178, 174, 174);
+        } 
+    }
+    p{  
+        margin:5px;
+        font-weight: bold;
+    }
+    p.price{
+        color:rgb(29, 96, 29);
+    }
+    button{
+        width:100%;
+        padding:5px;
+        border: none;
+        border-radius: 8px;
+        background-color: #f4b688;
+        &:hover{
+            box-shadow: 0px 0px 7px rgb(178, 174, 174);
+        }
+    
+    }
+}

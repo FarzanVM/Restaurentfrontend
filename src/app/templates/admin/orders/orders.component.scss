@@ -1,0 +1,74 @@
+.orderContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 10px;
+    row-gap: 10px;
+    .orderitem{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        // grid-template-rows: 50% 50%;
+        width:33%;
+        background-color: white;
+        border-radius: 8px;
+        padding: 10px;
+     
+        img{
+            grid-column: 1;
+            grid-row: span 4;
+            width:150px;
+            height:150px;
+            border-radius: 8px;
+        }
+        p{
+            font-weight: bold;
+            overflow-wrap: break-word;
+        }
+        .name{
+            grid-column: 2;
+            grid-row: 1;
+        }
+        .address{
+            grid-column: 2 span;
+            grid-row: 4 span;
+            overflow-wrap: break-word;
+        }
+        button{
+            height: 30px;
+            width: 75%;
+            border-radius: 8px;
+            border: none;
+            background-color:orange;
+            color:white;
+        }
+        .changestatus{
+            display: block;
+            position: relative;
+            width:180px;
+            overflow:hidden;
+            // top:55%;
+            // left:3%;
+            background-color: rgb(235, 224, 224);
+            text-align: center;
+            border-radius: 8px;
+            p{
+                cursor: pointer;
+                margin:5px;
+                padding: 5px;
+                border-radius: 8px;
+            }
+            .accepted{
+                background-color: rgb(98, 98, 194);
+                color:white;
+            }
+            .rejected{
+                background-color: red;
+                color: white;
+            }
+            .delivered{
+                background-color: rgb(10, 246, 10);
+                color:white;
+            }
+        }
+    }
+}

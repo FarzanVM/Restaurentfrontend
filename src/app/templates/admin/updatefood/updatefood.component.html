@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <link rel="stylesheet" src="./updatefood.component.scss">
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <body>
+        <div class="formContainer">
+            <form (ngSubmit)="f.form.valid && updatefood()" #f="ngForm">
+                <label>Food Name</label><br>
+                <input type="text" name="foodname" [(ngModel)]="model.name"><br>
+                <label>Quantity</label><br>
+                <input type="text" name="quantity" [(ngModel)]="model.quantity"><br>
+                <label>Food price</label><br>
+                <input type="text" name="foodprice" [(ngModel)]="model.price"><br>
+                <button type="submit">Update</button>
+            </form>
+        </div>
+    </body>
+</html>

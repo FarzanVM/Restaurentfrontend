@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <link rel="stylesheet" src="./allfood.component.scss">
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <body>
+        <div class="foodwrapper">
+            <div class="foodcontainer" *ngFor="let food of foodlist">
+                <img src= {{food.img}} alt="Biriyani">
+                <p>{{food.name}}</p>
+                <p>{{food.food_type}}</p>
+                <p class="price">{{food.price}} Rs</p>
+            </div>
+        </div>     
+    </body>
+</html>
+

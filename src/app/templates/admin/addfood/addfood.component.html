@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <link rel="stylesheet" src="./addfood.component.scss">
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <body>
+        <div class="formContainer">
+            <form (ngSubmit)="f.form.valid && addFood()" #f="ngForm" method="post">
+                <label>Food Name</label><br>
+                <input type="text" name="foodname" [(ngModel)]="model.name" ><br>
+                <label>Food type</label><br>
+                <input type="text" name="foodtype" [(ngModel)]="model.food_type"><br>
+                <label>Food price</label><br>
+                <input type="text" name="foodprice"  [(ngModel)]="model.price"><br>
+                <label>Food Image</label><input type="file" name="myfile"  (change)="encodeImg($event)">
+                <button type="submit">Add Food</button>
+            </form>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,61 @@
+
+.profilecontainer{
+    display: grid;
+    grid-template-columns: 100px 50px 50px 300px;
+    grid-template-rows: 50px 50px 200px;
+    padding:10px;
+    width:90%;
+    margin:10px;
+    background-color:aliceblue;
+    border-radius: 8px; 
+    img{
+        width:100px;
+        height:100px;
+        grid-column: 1 ;
+        grid-row: 1;
+    }
+    form{
+        grid-column: 3 span 4;
+        grid-column: 3;
+        grid-row: 1 span 3;
+        padding: 10px;
+        label{
+            grid-column: 3;
+        }
+        input{
+            grid-column: 3;
+            border-radius: 8px;
+            border: none;
+            margin-bottom: 5px;
+            padding:5px;
+        }
+        textarea{
+            border: none;
+        }
+        button{
+            padding:5px;
+            margin-bottom: 5px;
+            border-radius: 8px;
+            background-color: rgb(109, 109, 205);
+            border: none;
+            color: white;
+        }
+    }
+
+    .logout{
+        position: absolute;
+        right:5px;
+        padding:5px;
+        border:none;
+        border-radius: 8px;
+    }
+}
+@media screen and (max-width:480px) {
+    body{
+        padding:10px;
+    }
+    .profilecontainer{
+      display: flex;
+      flex-direction: column;
+    }
+}

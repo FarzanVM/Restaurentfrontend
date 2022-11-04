@@ -1,0 +1,117 @@
+html{
+    height: 100vh;
+    margin: 0px;
+}
+.header{
+    display: flex;
+    width: 100%;
+    background-color: #f4b688;
+    border-radius: 8px 8px 0 0;
+    padding:10px;
+    justify-content: center;
+    height:30px;
+    h1{
+        align-self: center;
+    }
+    input{
+        width:400px;
+        padding:5px;
+        border:none;
+        border-radius: 8px;
+        height:20px;
+    }
+    button{
+    padding: 5px;
+    border: none;
+    border-radius: 8px;
+    }
+    .material-symbols-outlined{
+       font-size: 30px;
+       border-radius: 50%;
+       position: absolute;
+       align-self: center;
+       right:5px;
+       &:hover{
+        cursor:pointer;
+        background-color: white;
+       }
+    }
+}
+@media screen and (max-width:480px) {
+    .navbar{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        margin-top: 35px;
+    }
+    .header{
+        display: flex;
+        flex-direction: column;
+        row-gap: 0;
+        h1{
+            position: relative;
+            align-self: center;
+            top:15px;   
+        }
+        input{
+            float: left;
+            width:330px;
+            padding:5px;
+            border:none;
+            border-radius: 8px;
+            height:20px;
+            margin-bottom: 5px;
+        }
+        button{
+            position: relative;
+            align-self: center;
+            margin-right:20px;
+            padding: 5px;
+            border: none;
+            border-radius: 8px;
+            }
+    }
+}
+.navbar{
+    display: flex;
+    justify-content: space-evenly;
+    padding:5px;
+    width:100%;
+    button{
+        padding:5px;
+        border: none;
+        border-radius: 8px;
+    }
+    .sortbylist{
+        display: block;
+        position: absolute;
+        top:14%;
+        left:9%;
+        background-color: white;
+        border-radius: 8px;
+        padding:5px;
+        p{
+            margin: 5px;
+            cursor: pointer;
+            &:hover{
+                text-shadow: 0px 0px 7px rgb(178, 174, 174);
+            }
+        }
+    } 
+    
+}
+.container{
+    padding: 10px;
+    width:100%;
+    height: 100vh;
+    background-color: #f4b688;
+    overflow-y: auto;
+    border-radius: 8px;
+    .foodwrapper{
+        display: flex;
+        flex-direction: row;
+        column-gap:26px;
+        row-gap:20px;
+        flex-wrap: wrap;
+    }
+}

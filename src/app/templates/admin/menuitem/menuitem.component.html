@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <link re="stylesheet" src="./menuitem.component.scss">
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <body>
+        <div class="menuitemWrapper">
+            <div class="menuitem" *ngFor="let menu of menulist">
+                <img src={{menu.img}}>
+                <p>Quantity:<span class="quantity">{{menu.quantity}}</span></p>
+                <p>Status:<span class="status">Available</span></p>
+            </div>
+            <!-- <div class="menuitem">
+                <img src="../../../../assets/images/biriyani.jpg">
+                <p>Quantity:</p>
+                <p>Status:</p>
+            </div>
+            <div class="menuitem">
+                <img src="../../../../assets/images/biriyani.jpg">
+                <p>Quantity:</p>
+                <p>Status:</p>
+            </div>
+            <div class="menuitem">
+                <img src="../../../../assets/images/biriyani.jpg">
+                <p>Quantity:</p>
+                <p>Status:</p>
+            </div> -->
+        </div>
+        
+    </body>
+</html>

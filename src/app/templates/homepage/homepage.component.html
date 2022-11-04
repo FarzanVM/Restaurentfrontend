@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <link rel="stylesheet" src="./homepage.component.scss">
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <body>
+        <!-- <h1>Foodie</h1> -->
+        <div class="header">
+            <h1>Foodie</h1>    
+            <div class="navbar">
+                <button (click)="login()">Login</button>
+                <button (click)="signup()">Signup</button>
+                <button (click)="adminsignup()">Admin</button> 
+            </div> 
+        </div>
+        <div class="textwrapper">
+            <p>Everything on your Fingertip</p>
+        </div>
+        <div class="formContainer" [ngStyle]="{'background-color':bgcolor}">
+            <router-outlet></router-outlet>
+        </div>
+    </body>
+</html>
